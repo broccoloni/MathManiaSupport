@@ -73,22 +73,12 @@
             Replace the <code>action</code> URL with your own Formspree form endpoint.
           </p>
 
-          <!--
-            IMPORTANT:
-            1) Create a Formspree form and paste your endpoint below.
-               It looks like: https://formspree.io/f/xxxxxx
-            2) OPTIONAL: Set a redirect URL in Formspree or use the hidden _redirect field.
-          -->
-          <form action="https://formspree.io/f/REPLACE_ME" method="POST">
+          <form action="https://formspree.io/f/xqeeeqlq" method="POST">
             <input type="email" name="email" placeholder="Your email (so I can reply)" required />
             <input type="text" name="subject" placeholder="Subject" />
             <textarea name="message" placeholder="Message (include level + world seed if relevant)" required></textarea>
             <input type="text" name="level" placeholder="Level (optional)" />
             <input type="text" name="worldSeed" placeholder="World Seed (optional)" />
-
-            <!-- Optional Formspree fields -->
-            <input type="hidden" name="_subject" value="Math Mania Support" />
-            <!-- <input type="hidden" name="_redirect" value="https://YOUR_GITHUB_USERNAME.github.io/YOUR_REPO/thanks.html" /> -->
 
             <button type="submit">Send</button>
           </form>
