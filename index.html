@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Math Mania — Support</title>
+    <meta name="description" content="Support and privacy info for Math Mania." />
+    <style>
+      :root{
+        --bg:#0B1020; --panel:#0D1530; --panel2:#111A33;
+        --border:#223056; --text:#EAF0FF; --muted:#AAB3C5; --link:#A5B4FC;
+      }
+      *{box-sizing:border-box}
+      body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial; background:var(--bg); color:var(--text);}
+      a{color:var(--link); text-decoration:none}
+      a:hover{text-decoration:underline}
+      .wrap{max-width:920px;margin:0 auto;padding:32px 16px 64px;}
+      .nav{display:flex;gap:14px;align-items:center;justify-content:flex-end;margin-bottom:22px}
+      .brand{margin-right:auto;font-weight:900;letter-spacing:.12em}
+      .card{background:linear-gradient(180deg,var(--panel),#0B132A); border:1px solid var(--border); border-radius:16px; padding:18px; box-shadow:0 8px 24px rgba(0,0,0,.25)}
+      h1{margin:0 0 6px;font-size:34px;letter-spacing:.06em}
+      h2{margin:22px 0 10px;font-size:16px;letter-spacing:.10em;text-transform:uppercase;color:#DDE4F0}
+      p{margin:10px 0;line-height:1.55;color:var(--text)}
+      .muted{color:var(--muted)}
+      .grid{display:grid;grid-template-columns:1fr;gap:14px}
+      @media(min-width:860px){.grid{grid-template-columns:1.1fr .9fr}}
+      .pill{display:inline-block;padding:6px 10px;border:1px solid var(--border);border-radius:999px;background:rgba(17,26,51,.45);color:var(--muted);font-weight:650;font-size:12px}
+      form{display:flex;flex-direction:column;gap:10px;margin-top:10px}
+      input, textarea{width:100%;padding:12px 12px;border-radius:12px;border:1px solid var(--border);background:var(--panel2);color:var(--text);outline:none}
+      textarea{min-height:120px;resize:vertical}
+      button{padding:12px 14px;border-radius:12px;border:1px solid #3B4B7A;background:#1A2547;color:var(--text);font-weight:800;cursor:pointer}
+      button:hover{filter:brightness(1.08)}
+      .footer{margin-top:16px;font-size:12px;color:var(--muted)}
+      .kicker{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 0}
+      code{background:rgba(0,0,0,.25);padding:2px 6px;border-radius:8px;border:1px solid rgba(34,48,86,.7)}
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="nav">
+        <div class="brand">MATH MANIA</div>
+        <a href="./index.html">Support</a>
+        <a href="./privacy.html">Privacy</a>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <h1>Support</h1>
+          <div class="kicker">
+            <span class="pill">Endless puzzles</span>
+            <span class="pill">One missing value per level</span>
+            <span class="pill">Hints optional</span>
+          </div>
+
+          <h2>How Math Mania works</h2>
+          <p>
+            Math Mania is an <strong>endless</strong> set of number and logic riddles.
+            Each level shows a puzzle with exactly <strong>one missing value</strong> (a “?”). Your goal is to find
+            the missing number.
+          </p>
+          <p>
+            Levels are generated deterministically from two numbers: your <strong>level</strong> and your <strong>World Seed</strong>.
+            That means: the same World Seed + the same level always gives the same puzzle.
+            If you want a totally different run of puzzles, change your World Seed in the app’s Settings.
+          </p>
+          <p class="muted">
+            Tip: If you’re reporting a bug, include the level number and world seed.
+          </p>
+
+          <h2>Contact</h2>
+          <p class="muted">
+            This is a static site (GitHub Pages), so the form below uses Formspree to send messages.
+            Replace the <code>action</code> URL with your own Formspree form endpoint.
+          </p>
+
+          <!--
+            IMPORTANT:
+            1) Create a Formspree form and paste your endpoint below.
+               It looks like: https://formspree.io/f/xxxxxx
+            2) OPTIONAL: Set a redirect URL in Formspree or use the hidden _redirect field.
+          -->
+          <form action="https://formspree.io/f/REPLACE_ME" method="POST">
+            <input type="email" name="email" placeholder="Your email (so I can reply)" required />
+            <input type="text" name="subject" placeholder="Subject" />
+            <textarea name="message" placeholder="Message (include level + world seed if relevant)" required></textarea>
+            <input type="text" name="level" placeholder="Level (optional)" />
+            <input type="text" name="worldSeed" placeholder="World Seed (optional)" />
+
+            <!-- Optional Formspree fields -->
+            <input type="hidden" name="_subject" value="Math Mania Support" />
+            <!-- <input type="hidden" name="_redirect" value="https://YOUR_GITHUB_USERNAME.github.io/YOUR_REPO/thanks.html" /> -->
+
+            <button type="submit">Send</button>
+          </form>
+
+          <div class="footer">
+            If the form doesn’t work for you, you can also open an issue in the GitHub repo (if enabled).
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Quick links</h2>
+          <p><a href="./privacy.html">Privacy Policy</a></p>
+
+          <h2>FAQ</h2>
+          <p><strong>Do I need a support page?</strong><br/>
+            App stores strongly prefer (and sometimes require) a way for users to contact you.
+            A simple support page like this + a support email is usually enough.
+          </p>
+          <p><strong>What should I include in a bug report?</strong><br/>
+            Level number, World Seed, what you expected, what happened, and your device model.
+          </p>
+
+          <h2>Version</h2>
+          <p class="muted">Add your app version here if you want (e.g., v1.0.0).</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
